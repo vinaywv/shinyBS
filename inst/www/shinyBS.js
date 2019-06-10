@@ -303,3 +303,12 @@ Shiny.addCustomMessageHandler("bsButtonUpdate", function(data) {
   };
   
 })
+
+Shiny.addCustomMessageHandler("bsDivUpdate", function(data) {
+  var div = $("#" + data.id);
+
+  if(data.hasOwnProperty("css")) {
+    div.addClass(data.css)
+  };
+
+})
