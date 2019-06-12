@@ -310,5 +310,13 @@ Shiny.addCustomMessageHandler("bsDivUpdate", function(data) {
   if(data.hasOwnProperty("css")) {
     div.addClass(data.css)
   };
+  
+  if(data.hasOwnProperty("draggable")) {
+    if(!data.draggable) {
+      div.addClass('disable-drag');
+    } else {
+      div.removeClass('disable-drag');
+    }
+  };
 
 })
