@@ -35,10 +35,3 @@ updateButton <- function(session, inputId, label = NULL, icon = NULL, value = NU
   session$sendCustomMessage("bsButtonUpdate", data)
   
 }
-
-updateDiv <- function(session, inputId, css = NULL) {
-
-  data <- dropNulls(list(id = inputId, css = css))
-
-  session$sendCustomMessage("bsDivUpdate", data)
-}
