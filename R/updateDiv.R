@@ -1,3 +1,4 @@
+#'@export
 updateDiv <- function(session, inputId, css = NULL, draggable = NULL) {
 
   data <- dropNulls(list(id = inputId, css = css, draggable = draggable))
